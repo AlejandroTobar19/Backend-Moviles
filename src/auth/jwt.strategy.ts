@@ -17,6 +17,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     if (payload?.jti && this.blacklist.has(payload.jti)) {
       throw new UnauthorizedException('Token invalidated');
     }
-    return payload; // { sub, email, role, jti }
+    return payload; 
   }
 }

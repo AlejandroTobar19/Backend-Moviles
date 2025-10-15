@@ -47,14 +47,13 @@ export class AuthService {
         const jti = randomUUID();
         const payload = { sub, email, role, jti };
 
-        // ✅ usa segundos (number). 86400 = 24*60*60
         const expiresIn: number = process.env.JWT_EXPIRES_IN
             ? Number(process.env.JWT_EXPIRES_IN)
             : 86400;
 
         const opts: JwtSignOptions = {
             secret: process.env.JWT_SECRET || 'devsecret',
-            expiresIn, // <- ahora es number y no da error
+            expiresIn, 
         };
 
         return this.jwt.signAsync(payload, opts);
