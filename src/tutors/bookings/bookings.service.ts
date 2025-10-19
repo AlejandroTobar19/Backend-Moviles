@@ -5,7 +5,7 @@ import { AvailabilityService } from '../availability/availability.service';
 
 @Injectable()
 export class BookingsService {
-  private bookings = new Map<string, Booking>(); // key: bookingId
+  private bookings = new Map<string, Booking>(); 
 
   constructor(private readonly availability: AvailabilityService) {}
 

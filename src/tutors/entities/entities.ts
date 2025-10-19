@@ -2,10 +2,10 @@ export type AvailabilityId = string;
 export type BookingId = string;
 
 export interface TutorProfile {
-  tutorId: string;        // = User.id con role 'tutor'
-  subjects: string[];     // materias impartidas
-  hourlyRate: number;     // tarifa por hora
-  rating?: number;        // 0..5
+  tutorId: string;        
+  subjects: string[];     
+  hourlyRate: number;     
+  rating?: number;       
   bio?: string;
 }
 
