@@ -49,4 +49,8 @@ export class UsersService {
     const { passwordHash, ...safe } = updated as any;
     return safe;
   }
+
+  getAll() {
+    return Array.from(this.users.values()).map(u => ({ ...u }));
+  }
 }
